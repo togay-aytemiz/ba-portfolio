@@ -109,7 +109,9 @@ nav h3 img {
     color: var(--color--main);
 }
 
-
+section {
+    scroll-margin-top: 30rem;
+}
 
 
 /* ----------------- */
