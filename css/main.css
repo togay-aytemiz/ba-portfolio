@@ -264,6 +264,15 @@ nav h3 img {
         justify-content: center;
         justify-items: center;
     }
+
+    .skills ul {
+        gap: 1.5rem;
+    }
+
+    .skills .logos li {
+        margin-right: 0;
+
+    }
 }
 
 @media (max-width: 640px) {
@@ -307,6 +316,8 @@ nav h3 img {
     .container {
         height: 140vh
     }
+
+    
 }
 
 
@@ -318,4 +329,6 @@ nav h3 img {
     .main-text {
         gap: 0.5rem;
     }
+
+    
 }
