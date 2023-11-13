@@ -1,0 +1,193 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap');
+
+
+/* Colors */
+:root {
+    --bg--nav: white;
+    --bg--main: #f9f9f9;
+    --primary: #2E86C1;
+    --btn--hover: #1A5276;
+    --color--main: #2d2e32;
+    --secondayColor--text: #555
+}
+
+/* shadows */
+:root {
+    --shdw--nav: 0 0 10px rgba(0,0,0,.09);
+    --shdw--image: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+  
+html {
+    scroll-behavior: smooth;
+}
+  
+body {
+    background-color: var(--bg--main);
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    color: var(--color--main);
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 40px 25px 40px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: var(--bg--nav);
+    box-shadow: var(--shdw--nav);
+}
+
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+    transition: all .2s;
+    font-weight: 600;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color--main);
+    transition: all .2s;
+}
+
+nav a:not(.btn-filled):hover {
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.btn-filled {
+    background-color: var(--primary);
+    padding: 10px 12px;
+    color: var(--bg--main);
+    border-radius: 0.5rem;
+    
+}
+
+.btn-filled:hover {
+    background-color: var(--btn--hover);
+    transition: all .2s;
+}
+
+
+
+.container {
+    height: 100vh;
+    width: 90%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 15vh auto;
+}
+
+
+
+.main {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+} 
+
+.main-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    flex: 3;
+    max-width: 30rem;
+}
+
+.main-text h1 {
+    font-size: 3.5rem;
+    margin-block: 1.2rem;
+}
+
+.main-text p {
+    line-height: 1.6;
+    font-size: 1.2rem;
+    color: var(--secondayColor--text);
+}
+
+.main-text span {
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+    margin-block: 2rem; 
+}
+
+.main-text span a {
+    color: var(--color--main);
+    font-size: 2rem;
+}
+
+.main-text span a:hover {
+    color: var(--primary);
+    transition: all 0.2s;
+}
+
+
+.main .image {
+    width: 350px;
+    height: 350px;
+    background-color: rebeccapurple;
+    display: inline-block;
+    flex: 1;
+    border-radius: 2rem;
+    box-shadow: var(--shdw--image);
+}
+
+.skills {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.skills .tech-stack {
+    border-right: 1px solid var(--color--main);
+    margin-right: 2rem;
+    padding-right: 2rem;
+    font-weight: 700;
+}
+
+.skills .logos li {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 2rem;
+    gap: 0.2rem
+}
+
+.logos p {
+    font-size: 0.8rem;
+    color: var(--secondayColor--text);
+    opacity: 0.7;
+    
+}
+
+.skills ul {
+    display: flex;
+}
+
+
+
+
+
+
+
+
