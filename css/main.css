@@ -117,7 +117,7 @@ nav h3 img {
 /* ----------------- */
 
 .container {
-    height: 100vh;
+    height: 120vh;
     width: 90%;
     max-width: 900px;
     display: flex;
@@ -220,7 +220,7 @@ nav h3 img {
 
 @media (max-width: 1000px) {
     
-
+    
     .main {
         flex-direction: column;
         justify-content: center;
@@ -267,6 +267,11 @@ nav h3 img {
 }
 
 @media (max-width: 640px) {
+
+    nav {
+        padding: 1rem 1.3rem 1rem 1.3rem;
+    }
+
     
     nav ul.desktop {
         display: none;
@@ -277,8 +282,8 @@ nav h3 img {
     }
 
     .main .image {
-        width: 70%;
-        height: 70%;
+        width: 80%;
+        height: 80%;
     }
 
     .main-text h1 {
@@ -299,11 +304,18 @@ nav h3 img {
         margin-bottom: 0.5rem; 
     }
 
+    .container {
+        height: 140vh
+    }
 }
 
 
 @media (max-width: 400px) {
     .main-text h1 {
         font-size: 1.7rem;
+    }
+
+    .main-text {
+        gap: 0.5rem;
     }
 }
