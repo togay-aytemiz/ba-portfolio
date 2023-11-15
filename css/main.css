@@ -16,6 +16,7 @@
 :root {
     --shdw--nav: 0 0 10px rgba(0,0,0,.09);
     --shdw--image: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    --shdw--project: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 
@@ -34,6 +35,52 @@ body {
     font-family: 'Poppins', sans-serif;
     position: relative;
     color: var(--color--main);
+}
+
+
+.container {
+    /* height: 100vh; */
+    width: 90%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 auto;
+}
+
+
+.image {
+    width: 20rem;
+    height: 100%;
+    display: inline-block;
+    flex: 1;
+    border-radius: 1.5rem;
+    box-shadow: var(--shdw--image);
+}
+
+
+span:not(.material-symbols-rounded) {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+    margin-block: 2rem; 
+}
+
+span a {
+    color: var(--color--main);
+    text-decoration: none;
+    align-items: center;
+    display: flex;
+    gap: 5px;
+
+}
+
+span a:hover {
+    color: var(--primary);
+    transition: all 0.2s;
 }
 
 
@@ -109,16 +156,6 @@ nav h3 img {
     color: var(--color--main);
 }
 
-.container {
-    /* height: 100vh; */
-    width: 90%;
-    max-width: 900px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    margin: 0 auto;
-}
 
 
 /* ----------------- */
@@ -128,7 +165,7 @@ nav h3 img {
 
 
 .hero .container {
-    margin: 25vh auto 30vh auto;
+    margin: 25vh auto;
 }
 
 .main {
@@ -156,31 +193,12 @@ nav h3 img {
     color: var(--secondayColor--text);
 }
 
-.main-text span {
-    display: flex;
-    gap: 1rem;
-    cursor: pointer;
-    margin-block: 2rem; 
+.hero span {
+    justify-content: flex-start;
 }
 
-.main-text span a {
-    color: var(--color--main);
-    font-size: 2rem;
-}
 
-.main-text span a:hover {
-    color: var(--primary);
-    transition: all 0.2s;
-}
 
-.image {
-    width: 20rem;
-    height: 20rem;
-    display: inline-block;
-    flex: 1;
-    border-radius: 2rem;
-    box-shadow: var(--shdw--image);
-}
 
 .skills {
     display: flex;
@@ -220,6 +238,7 @@ section {
 
 
 
+
 /* ----------------- */
 /* About ----------- */
 /* ----------------- */
@@ -237,6 +256,7 @@ section {
 
 .about-content .image {
     object-fit: cover;
+    height: 100%;
     margin: 0 auto;
 }
 
@@ -276,8 +296,45 @@ section {
     background-color: var(--bg--main);
     padding-block: 15vh;
     scroll-margin-top: 10vh;
-
 }
+
+#projects .container{
+    text-align: center;
+    max-width: 900px;
+    ;
+}
+
+.projects .details {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    max-width: 30rem;
+    gap: 1rem;
+}
+
+.project-card {
+    display: flex;
+    gap: 2rem;
+    /* height: 25rem; */
+    padding: 1.5rem;
+    background-color: var(--bg--nav);
+    margin-top: 4rem;
+    border-radius: 3rem;
+    box-shadow: var(--shdw--project);
+    
+}
+.project-img {
+    width: 28rem;
+    height: auto;
+    object-fit:cover;
+}
+
+
+
+
+
+
 
 
 
@@ -358,6 +415,15 @@ section {
         margin-right: 0;
 
     }
+
+    .projects .project-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-img {
+        width: min(40rem, 100%)
+    }
 }
 
 @media (max-width: 640px) {
@@ -400,18 +466,20 @@ section {
 
     .hero .container {
         margin: 15vh auto;
-        height: 85vh;
     }
 
-    #about {
+    #about, #projects {
         padding-block: 10vh;
     }
 
+   
+   
+   
     
 }
 
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
     .main-text h1 {
         font-size: 1.7rem;
     }
