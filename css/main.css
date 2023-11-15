@@ -5,7 +5,7 @@
 /* Colors */
 :root {
     --bg--nav: white;
-    --bg--main: #f9f9f9;
+    --bg--main: #F2F3F4;
     --primary: #8673F3;
     --btn--hover: #B690F9;
     --color--main: #2d2e32;
@@ -82,6 +82,11 @@ span a:hover {
     color: var(--primary);
     transition: all 0.2s;
 }
+
+.strong {
+    font-weight: bolder;
+}
+
 
 
 
@@ -274,7 +279,7 @@ section {
     
 }
 
-.section-header h1 , .projects h1{
+.section-header h1 , .projects h1, .contact h1{
     font-size: 2.2rem;
     color: var(--primary);
     text-transform: uppercase;
@@ -343,13 +348,82 @@ section {
 
 
 
+/* ----------------- */
+/* Contact --------- */
+/* ----------------- */
+
+#contact {
+    background-color: var(--bg--nav);
+    padding-block: 15vh;
+    scroll-margin-top: 10vh;
+}
+
+
+#contact .container {
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+
+.contact svg {
+    color: var(--primary);
+
+}
+
+.contact-methods {
+    display: flex;
+    gap: 4rem;
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+.email-texts {
+    display: flex;
+    flex-direction: column;
+}
+.email-address {
+    text-decoration: none;
+    color: var(--color--main);
+    cursor: pointer;
+}
+
+.email-address:hover {
+    color: var(--primary);
+    transition: all 0.2s;
+}
 
 
 
 
+/* ----------------- */
+/* Footer- --------- */
+/* ----------------- */
 
 
+footer {
+    background-color: var(--color--main);
+    padding: 1rem 2.5rem 1rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--bg--main)
+}
 
+footer span a{
+    color: var(--bg--nav)
+}
 
 
 
@@ -434,6 +508,11 @@ section {
     .project-img {
         width: min(40rem, 100%)
     }
+
+    .contact-methods {
+        flex-direction: column;
+        gap: 2rem;
+    }
 }
 
 @media (max-width: 640px) {
@@ -482,7 +561,11 @@ section {
         padding-block: 10vh;
     }
 
-   
+   footer {
+    flex-direction: column;
+    padding-top: 2rem;
+    text-align: center;
+   }
    
    
     
